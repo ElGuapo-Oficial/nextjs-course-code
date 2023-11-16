@@ -17,4 +17,11 @@ So whats the big deal here?
      
 3) Inside Pages folder we can also have an 'api' folder for apis
     - The apis can be hit from the client code (e.g.: fetch('/api/{api_filename}'))
-    -
+
+Note:
+For getStaticProps and getStaticPaths, Next.js waits for data fetching at build time, not at request time, 
+unless you are using revalidation with getStaticProps. 
+
+For getServerSideProps, it waits for data fetching on each request. 
+
+For client-side data fetching, it does not wait and serves the page immediately.
